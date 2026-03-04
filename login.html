@@ -1,0 +1,103 @@
+<!
+    Autor: Alberto Ortiz Arribas
+    Fecha: 01-03-2025
+    Resumen: Se muestra un formulario pequeño para introducir el correo y contraseña, para realizar el login
+    y se establecen dos enlaces: para registrarse y si has olvidado la contraseña.
+>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('imagenes/tenis.jpg') no-repeat center center fixed; /* Imagen de fondo */
+            background-size: cover; /* Que la imagen ocupe toda la pantalla */
+        }
+
+        .login-container {
+            width: 400px; /* Más ancho */
+            padding: 30px; /* Más espacio interno */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo translúcido */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px; /* Más espacio entre campos */
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px; /* Más espacio en los campos */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .login-container a {
+            display: block; /* Coloca los enlaces en líneas separadas */
+            text-align: center;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar sesión</h2>
+    <form action="login.php" method="POST">
+        <div class="form-group">
+            <label for="correo">Correo</label>
+            <input type="text" id="correo" name="correo" required>            
+        </div>
+        <div class="form-group">
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Ingresar">
+        </div>
+        <a href="registrar.html">Registrarse</a>
+        <a href="formulario-recuperacion.html">¿Has olvidado la contraseña?</a>
+    </form>
+  </div> 
+</body>
+</html>

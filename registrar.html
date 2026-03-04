@@ -1,0 +1,139 @@
+
+<! Autor: Alberto Ortiz Arribas
+    Fecha: 01-03-2025
+    Resumen: Se presenta la interfaz que se verá al registrar un nuevo usuario en nuestro sistema, donde se muestra un formulario.
+>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        /* Estilos globales */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        /* Contenedor del formulario */
+        .register-container {
+            width: 350px;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        /* Título */
+        .register-container h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 22px;
+        }
+
+        /* Estilos para cada grupo de formulario */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border 0.3s ease-in-out;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Botón de envío */
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group input[type="submit"]:active {
+            background-color: #004096;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Registro</h2>
+        <form action="registrar.php" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+            <div class="form-group">
+                <label for="fechanacimiento">Fecha Nacimiento</label>
+                <input type="date" id="fechanacimiento" name="fechanacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="contraseña">Contraseña con caracteres especiales:@$!%*?&</label>
+                <input type="password" id="contraseña" name="contraseña" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_contraseña">Confirmar Contraseña</label>
+                <input type="password" id="confirm_contraseña" name="confirm_contraseña" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrar">
+            </div>
+        </form>
+        <button onclick="window.location.href='login.html'" style="margin-top: 20px; background: blue; color: white; padding: 10px; border: none; cursor: pointer; border-radius: 5px;">
+            Volver al Login
+        </button>
+        
+    </div>
+
+</body>
+</html>
