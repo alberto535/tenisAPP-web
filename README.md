@@ -59,7 +59,10 @@ Crear nueva base de datos (ejemplo):
 liga_tenis
 📊 Estructura de la Base de Datos
 
-La base de datos debe crearse siguiendo el modelo relacional mostrado en el diagrama proporcionado en el TFG.
+La base de datos debe crearse siguiendo el modelo relacional mostrado en el diagrama proporcionado en el TFG. Es el siguiente:
+
+![ESQUEMA DE LA BASE DE DATOS](https://github.com/alberto535/tenisAPP-web/blob/master/BasesDeDatos.drawio.png?raw=true)
+
 
 Tablas necesarias:
 
